@@ -30,7 +30,7 @@ public class PoolAddEntryDialog extends JDialog {
 		String[] columnTypes = poolPanel.columnTypes;
 		this.components = new JComponent[columnTypes.length];
 
-		this.setTitle("Eintrag hinzufügen");
+		this.setTitle("Eintrag hinzufÃ¼gen");
 		this.setModal(true);
 		this.setResizable(false);
 		this.setLocationRelativeTo(poolPanel.main);
@@ -76,7 +76,7 @@ public class PoolAddEntryDialog extends JDialog {
 
 			JPanel southPanel = new JPanel(new FlowLayout());
 			{
-				JButton button = new JButton("Hinzufügen");
+				JButton button = new JButton("HinzufÃ¼gen");
 				button.addActionListener(new ActionListener() {
 
 					@Override

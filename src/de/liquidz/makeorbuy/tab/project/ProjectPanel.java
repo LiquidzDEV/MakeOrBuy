@@ -68,7 +68,7 @@ public class ProjectPanel extends JPanel {
 
 			JPanel buttonPane = new JPanel();
 			{
-				JButton addButton = new JButton("Hinzufügen");
+				JButton addButton = new JButton("HinzufÃ¼gen");
 				addButton.setActionCommand("add");
 				addButton.addActionListener(panelActionListener);
 				buttonPane.add(addButton);
@@ -78,7 +78,7 @@ public class ProjectPanel extends JPanel {
 				editButton.addActionListener(panelActionListener);
 				buttonPane.add(editButton);
 
-				JButton deleteButton = new JButton("Löschen");
+				JButton deleteButton = new JButton("LÃ¶schen");
 				deleteButton.setActionCommand("delete");
 				deleteButton.addActionListener(panelActionListener);
 				buttonPane.add(deleteButton);
@@ -126,7 +126,7 @@ public class ProjectPanel extends JPanel {
 
 			new ProjectDialog(this.main.projects.get(outPut));
 		} else {
-			this.addProject("Wie soll das Projekt heißen?\nDer Name muss min. 3 Zeichen enthalten.");
+			this.addProject("Wie soll das Projekt heiÃŸen?\nDer Name muss min. 3 Zeichen enthalten.");
 		}
 
 	}

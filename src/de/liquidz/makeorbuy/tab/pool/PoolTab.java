@@ -23,7 +23,7 @@ public class PoolTab extends JPanel {
 
 	public static final String[]	QUALITYS			= { "Sehr hoch", "Hoch", "Normal", "Niedrig" };
 	public static final String[]	SPEEDS				= { "Sehr schnell", "Schnell", "Normal", "Langsam" };
-	public static final String[]	UNITS				= { "Stk.", "kg", "L", "m", "m²", "m³" };
+	public static final String[]	UNITS				= { "Stk.", "kg", "L", "m", "mÂ²", "mÂ³" };
 
 	public MakeOrBuy				main;
 
@@ -52,7 +52,7 @@ public class PoolTab extends JPanel {
 		buttonPane.setLayout(new FlowLayout(FlowLayout.CENTER));
 		this.add(buttonPane, BorderLayout.SOUTH);
 		{
-			JButton addButton = new JButton("Hinzufügen");
+			JButton addButton = new JButton("HinzufÃ¼gen");
 			addButton.setActionCommand("add");
 			addButton.addActionListener(poolActionListener);
 			buttonPane.add(addButton);
@@ -62,7 +62,7 @@ public class PoolTab extends JPanel {
 			editButton.addActionListener(poolActionListener);
 			buttonPane.add(editButton);
 
-			JButton deleteButton = new JButton("Löschen");
+			JButton deleteButton = new JButton("LÃ¶schen");
 			deleteButton.setActionCommand("delete");
 			deleteButton.addActionListener(poolActionListener);
 			buttonPane.add(deleteButton);
@@ -107,7 +107,7 @@ public class PoolTab extends JPanel {
 		if (outPut.trim().length() > 0) {
 			this.table.setValueAt(outPut, selectedRow, selectedColumn);
 		} else {
-			JOptionPane.showMessageDialog(null, "Sie müssen einen Wert eintragen.");
+			JOptionPane.showMessageDialog(null, "Sie mÃ¼ssen einen Wert eintragen.");
 		}
 
 	}

@@ -61,13 +61,13 @@ public class ProjectDialog extends JDialog {
 		panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 		panel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 
-		// Gewünschte Menge
+		// GewÃ¼nschte Menge
 		JPanel subPanel = new JPanel();
-		subPanel.add(new JLabel("Gewünschte Menge:"));
+		subPanel.add(new JLabel("GewÃ¼nschte Menge:"));
 		this.txtQuantity = new NumberTextField(project.quantity, 15);
 		this.txtQuantity.addFocusListener(new ComponentFocusListener());
 		subPanel.add(this.txtQuantity);
-		subPanel.add(new JLabel("Stück"));
+		subPanel.add(new JLabel("StÃ¼ck"));
 		subPanel.setMaximumSize(new Dimension(500, 45));
 		panel.add(subPanel);
 
@@ -113,7 +113,7 @@ public class ProjectDialog extends JDialog {
 
 		// Material verwalten
 		subPanel = new JPanel(new BorderLayout());
-		subPanel.add(new JLabel("Material pro Stück auswählen:"), BorderLayout.NORTH);
+		subPanel.add(new JLabel("Material pro StÃ¼ck auswÃ¤hlen:"), BorderLayout.NORTH);
 
 		this.tblMaterial = new JTable(new ProjectTableModel(new String[] { "Name", "Bezeichnung", "Menge", "Einheit" }, 2));
 		for (int i = 0; i < project.material.length; i++) {
@@ -125,7 +125,7 @@ public class ProjectDialog extends JDialog {
 		subPanel.add(scrollPane, BorderLayout.CENTER);
 		panel.add(subPanel);
 
-		// Lieferant auswählen
+		// Lieferant auswÃ¤hlen
 		subPanel = new JPanel();
 		subPanel.add(new JLabel("Lieferant:"));
 		String[] data = new String[project.lieferanten.length];
@@ -139,12 +139,12 @@ public class ProjectDialog extends JDialog {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				int row = ((JComboBox<String>) e.getSource()).getSelectedIndex();
-				lblDeliverer.setText("Qualität: " + project.lieferanten[row][2] + " Lieferzeit: " + project.lieferanten[row][1] + " Tage");
+				lblDeliverer.setText("QualitÃ¤t: " + project.lieferanten[row][2] + " Lieferzeit: " + project.lieferanten[row][1] + " Tage");
 				calculateResult(true);
 			}
 		});
 		subPanel.add(cBoxDeliverer);
-		this.lblDeliverer = new JLabel("Qualität: " + project.lieferanten[this.project.choosenDeliverer][2] + " Lieferzeit: " + project.lieferanten[this.project.choosenDeliverer][1] + " Tage");
+		this.lblDeliverer = new JLabel("QualitÃ¤t: " + project.lieferanten[this.project.choosenDeliverer][2] + " Lieferzeit: " + project.lieferanten[this.project.choosenDeliverer][1] + " Tage");
 		subPanel.add(lblDeliverer);
 		panel.add(subPanel);
 
@@ -157,7 +157,7 @@ public class ProjectDialog extends JDialog {
 		subPanel.setBorder(BorderFactory.createTitledBorder("Buy-Kriterien"));
 
 		JPanel anotherPanel = new JPanel();
-		anotherPanel.add(new JLabel("Kaufpreis das Stück:"));
+		anotherPanel.add(new JLabel("Kaufpreis das StÃ¼ck:"));
 		this.txtBuyPrice = new JTextField(String.valueOf(project.buyPrice), 15);
 		this.txtBuyPrice.addFocusListener(new ComponentFocusListener());
 		anotherPanel.add(this.txtBuyPrice);
@@ -278,7 +278,7 @@ public class ProjectDialog extends JDialog {
 
 		float gesamtKosten = personalKosten + maschinenKosten + materialKosten + versandKosten;
 		if (personalKosten > 0 && maschinenKosten > 0 && materialKosten > 0 && versandKosten > 0) {
-			this.lblPrice.setText("Fertigungskosten: " + String.format("%.2f",gesamtKosten) + " Euro (" + String.format("%.2f",(gesamtKosten / this.project.quantity)) + " Euro pro Stück)");
+			this.lblPrice.setText("Fertigungskosten: " + String.format("%.2f",gesamtKosten) + " Euro (" + String.format("%.2f",(gesamtKosten / this.project.quantity)) + " Euro pro StÃ¼ck)");
 			compare[0] = true;
 		} else {
 			this.lblPrice.setText("Fertigungskosten: N/A");

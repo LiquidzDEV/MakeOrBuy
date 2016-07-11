@@ -25,7 +25,7 @@ import de.liquidz.makeorbuy.tab.pool.PoolTab;
 import de.liquidz.makeorbuy.tab.project.Project;
 import de.liquidz.makeorbuy.tab.project.ProjectPanel;
 
-//TODO Erstelldatum, Änderungsdatum von Projekten
+//TODO Erstelldatum, Ã„nderungsdatum von Projekten
 
 public class MakeOrBuy extends JFrame {
 
@@ -83,7 +83,7 @@ public class MakeOrBuy extends JFrame {
 		managerPanel = Serializer.loadManager(Serializer.MACHINE_DIR);
 		this.panelMachines = managerPanel == null ? new PoolTab(this, machineData) : managerPanel;
 
-		String[][] delivererData = { { "Name", "Lieferzeit in Tagen", "Qualität", "Versandkosten" }, { PoolTab.TEXTAREA, PoolTab.TEXTAREA, PoolTab.QUALITYMENU, PoolTab.TEXTAREA } };
+		String[][] delivererData = { { "Name", "Lieferzeit in Tagen", "QualitÃ¤t", "Versandkosten" }, { PoolTab.TEXTAREA, PoolTab.TEXTAREA, PoolTab.QUALITYMENU, PoolTab.TEXTAREA } };
 		managerPanel = Serializer.loadManager(Serializer.DELIVERER_DIR);
 		this.panelDeliverer = managerPanel == null ? new PoolTab(this, delivererData) : managerPanel;
 
@@ -95,11 +95,11 @@ public class MakeOrBuy extends JFrame {
 		panelMaterials.addEntry(new String[] { "Schraube", "M12x10", "3", "100", "Stk." });
 		panelMaterials.addEntry(new String[] { "Mutter", "M12", "2", "100", "Stk." });
 		panelMaterials.addEntry(new String[] { "Stahl", "S235JR+C", "50", "1", "kg" });
-		panelMaterials.addEntry(new String[] { "Kabel", "NYM-J 3x1.5mm²", "40", "50", "m" });
+		panelMaterials.addEntry(new String[] { "Kabel", "NYM-J 3x1.5mmÂ²", "40", "50", "m" });
 		panelMaterials.addEntry(new String[] { "Rundstahl", "11SMNPB30", "25", "1", "m" });
 
 		panelMachines.addEntry(new String[] { "Super", "Bohrmaschine", "10", "1" });
-		panelMachines.addEntry(new String[] { "Express", "Fräsmaschine", "30", "1" });
+		panelMachines.addEntry(new String[] { "Express", "FrÃ¤smaschine", "30", "1" });
 
 		panelDeliverer.addEntry(new String[] { "SuperFix", "5", "Niedrig", "30" });
 		panelDeliverer.addEntry(new String[] { "TipTop", "10", "Sehr hoch", "50" });

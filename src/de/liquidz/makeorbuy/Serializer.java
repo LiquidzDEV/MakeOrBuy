@@ -15,7 +15,7 @@ import de.liquidz.makeorbuy.tab.pool.PoolTab;
 import de.liquidz.makeorbuy.tab.project.Project;
 
 /**
- * Enth‰lt Methoden die zum Laden und Speichern der Serialisierten Objekte zust‰ndig sind.
+ * Enth√§lt Methoden die zum Laden und Speichern der Serialisierten Objekte zust√§ndig sind.
  * 
  * @author Pascal
  */
