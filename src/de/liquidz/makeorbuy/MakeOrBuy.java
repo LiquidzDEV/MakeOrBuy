@@ -25,7 +25,7 @@ import de.liquidz.makeorbuy.tab.pool.PoolTab;
 import de.liquidz.makeorbuy.tab.project.Project;
 import de.liquidz.makeorbuy.tab.project.ProjectPanel;
 
-//TODO Erstelldatum, Ã„nderungsdatum von Projekten
+//TODO Erstelldatum, Änderungsdatum von Projekten
 
 public class MakeOrBuy extends JFrame {
 
